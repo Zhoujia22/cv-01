@@ -11,51 +11,53 @@
     <div id="div1Wrapper">
       <div id="div1"></div>
     </div>
-    <style>* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      #div1::after {
+        box-sizing: border-box;
+      }
+      #div1::before {
+        box-sizing: border-box;
+      }
+      #html {
+        word-break: break-all;
+      }
 
-#div1:after, #div1:before {
-  box-sizing: border-box;
-}
-
-#html {
-  word-break: break-all;
-}
-
-#div1 {
-  position: fixed;
-  top: 50px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-#div1:before, #div1:after {
-  content: "";
-  display: block;
-  position: absolute;
-}
-
-@media (max-width: 500px) {
-  #html {
-    height: 70vh;
-    overflow: auto;
-  }
-
-  #div1Wrapper {
-    height: 30vh;
-  }
-
-  #div1 {
-    position: relative;
-    top: 50px;
-  }
-}
-
-</style>
+      #div1 {
+        position: fixed;
+        top: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      #div1::before {
+        content: "";
+        display: block;
+        position: absolute;
+      }
+      #div1::after {
+        content: "";
+        display: block;
+        position: absolute;
+      }
+      @media (max-width=500px) {
+        #html {
+          height: 70vh;
+          overflow: auto;
+        }
+        #div1Wrapper {
+          height: 30vh;
+        }
+        #div1 {
+          position: relative;
+          top: 50px;
+        }
+      }
+    </style>
     <style id="style"></style>
-    <script src="/index.de158e3a.js"></script>
+    <script src="main.3f3b8b86.js"></script>
   </body>
 </html>
